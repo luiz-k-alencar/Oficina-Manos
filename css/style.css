@@ -5,11 +5,18 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  text-decoration: none;
 }
 
 section{
   padding: 100px;
+}
+
+.yellow{
+  color: #F3E11D;
+}
+
+.red{
+  color: #A50021;
 }
 
 /* HEADER */
@@ -29,10 +36,10 @@ header{
 }
 
 header.sticky{
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 12px 100px 5px 100px;
   background-color: #F3E11D;
   background-image: none;
-  padding: 12px 100px 5px 100px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 #logo{
@@ -41,6 +48,7 @@ header.sticky{
 
 header ul{
   position: relative;
+  margin-bottom: 0px;
   display: flex;
 }
 
@@ -64,10 +72,12 @@ header ul li a {
 header ul li a:hover{
   border-bottom: 4px solid #F3E11D;
   font-weight: bold;
+  color: #A50021;
 }
 
 header.sticky ul li a:hover{
   border-bottom: 4px solid #A50021;
+  color: #A50021;
 }
 
 /* BANNER */
@@ -102,7 +112,7 @@ header.sticky ul li a:hover{
   font-weight: 500;
 }
 
-.btn{
+.aboutUsBtn{
   border: 1px solid transparent;
   text-transform: uppercase;
   text-decoration: none;
@@ -118,8 +128,10 @@ header.sticky ul li a:hover{
   font-size: 18px;
 }
 
-.btn:hover{
+.aboutUsBtn:hover{
+  text-decoration: none;
   font-weight: bold; 
+  color: #F3E11D;
 }
 
 /* ABOUT US */
@@ -148,7 +160,12 @@ header.sticky ul li a:hover{
 
 .contentBx h3{
   margin-bottom: 10px;
+  font-weight: 700;
   font-size: 24px;
+}
+
+.contentBx h4{
+  font-weight: 700;
 }
 
 .w50{
@@ -161,30 +178,29 @@ img{
 
 /* SERVICES */
 
-.heading.yellow{
-  color: #F3E11D;
-}
-
 .services{
   background: #A50021;
 }
 
 .services .content{
   justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
 }
 
 .services .content .servicesBx{
-  background: #fff;
+  text-decoration: none;
   padding: 40px 20px;
-  max-width: 340px;
-  width: 25%;
-  color: #A50021;
-  margin: 20px;
+  background: #fff;
   text-align: center;
   transition: 500ms;
+  max-width: 340px;
+  height: 250px;
+  color: #A50021;
+  border: none;
+  margin: 20px;
+  width: 25%;
 }
 
 .services .content .servicesBx:hover{
@@ -192,28 +208,20 @@ img{
 }
 
 .services .content .servicesBx img{
+  margin-bottom: 15px;
   max-width: 80px;
 }
 
 .services .content .servicesBx h2{
-  font-size: 20px;
   font-weight: 600;
+  font-size: 20px;
 }
 
 .services .content .servicesBx p{
   border-bottom: 2px solid #A50021;
-  display: inline;
   font-weight: 500;
+  display: inline;
   width: 100%;
-}
-
-.tips{
-  width: 800px;
-  height: 500px;
-  background: pink;
-  position: absolute;
-  /* top: 50%; */
-
 }
 
 /* PARTNERS */
@@ -235,4 +243,11 @@ img{
 
 .contact{
   background: #A50021;
+}
+
+.square{
+
+  width: 100px;
+  height: 100px;
+  background:#fff
 }

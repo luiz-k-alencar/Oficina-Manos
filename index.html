@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
 
     <title id="title">Manos</title>
   </head>
@@ -25,7 +31,7 @@
       <div class="textBx">
         <h2>Olá, nós somos a<br /><span>Manos</span></h2>
         <h3>Autocenter e Automecânica.</h3>
-        <a href="#aboutUs" class="btn">Sobre nós</a>
+        <a href="#aboutUs" class="aboutUsBtn">Sobre nós</a>
       </div>
     </section>
     <section id="aboutUs" class="aboutUs">
@@ -58,101 +64,137 @@
       </div>
     </section>
     <section id="services" class="services">
-      <div class="heading yellow">
-        <h2>Nossos serviços</h2>
+      <div class="heading">
+        <h2 class="yellow">Nossos serviços</h2>
       </div>
       <div class="content">
-        <a href="./pages/tips.html" class="servicesBx" id="Balanceamento">
+        <button 
+          class="servicesBx" 
+          id="Balanceamento"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#balanceamentoModal"
+        >
           <img src="./assets/icons/balanceamento.png" alt="Balanceamento" />
           <h2>Alinhamento e Balanceamento</h2>
-          <p>
-            Clique para dicas!
-          </p>
-        </a>
-        <a href="./pages/tips.html" class="servicesBx">
+          <p>Clique para dicas!</p>
+        </button>
+        <button 
+          class="servicesBx"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#pneuModal"
+        >
           <img src="./assets/icons/pneu.png" alt="Penu" />
           <h2>Troca de Pneus</h2>
-          <p>
-            Clique para dicas!
-          </p>
-        </a>
-        <a href="./pages/tips.html" class="servicesBx">
+          <p>Clique para dicas!</p>
+        </button>
+        <button 
+          class="servicesBx"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#arModal"
+        >
           <img
             src="./assets/icons/air-conditioning.png"
             alt="Ar Condicionado"
           />
           <h2>Ar Condicionado</h2>
-          <p>
-            Clique para dicas!
-          </p>
-        </a>
-        <a href="./pages/tips.html" class="servicesBx">
+          <p>Clique para dicas!</p>
+        </button>
+        <button 
+          class="servicesBx"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#direcaoModal"
+        >
           <img src="./assets/icons/direcao.png" alt="Direção Hidráulica" />
           <h2>Direção Hidráulica</h2>
-          <p>
-            Clique para dicas!
-          </p>
-        </a>
-        <a href="./pages/tips.html" class="servicesBx">
+          <p>Clique para dicas!</p>
+        </button>
+        <button 
+          class="servicesBx"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#suspensaoModal"
+        >
           <img src="./assets/icons/suspensao.png" alt="Suspensão" />
           <h2>Suspensão</h2>
-          <p>
-            Clique para dicas!
-          </p>
-        </a>
-        <a href="./pages/tips.html" class="servicesBx">
+          <p>Clique para dicas!</p>
+        </button>
+        <button 
+          class="servicesBx"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#freiosModal"
+        >
           <img src="./assets/icons/freios.png" alt="Freios" />
           <h2>Freios</h2>
-          <p>
-            Clique para dicas!
-          </p>
-        </a>
-        <a href="./pages/tips.html" class="servicesBx">
+          <p>Clique para dicas!</p>
+        </button>
+        <button 
+          class="servicesBx"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#escapamentoModal"
+        >
           <img src="./assets/icons/escapamentos.png" alt="Escapamento" />
           <h2>Escapamento</h2>
-          <p>
-            Clique para dicas!
-          </p>
-        </a>
-        <a href="./pages/tips.html" class="servicesBx">
+          <p>Clique para dicas!</p>
+        </button>
+        <button 
+          class="servicesBx"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#oleoModal"
+        >
           <img src="./assets/icons/oleo.png" alt="Troca de Oléo" />
           <h2>Troca de Oléo</h2>
-          <p>
-            Clique para dicas!
-          </p>
-        </a>
-        <a href="./pages/tips.html" class="servicesBx">
+          <p>Clique para dicas!</p>
+        </button>
+        <button 
+          class="servicesBx"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#regulagemModal"
+        >
           <img src="./assets/icons/regulagem.png" alt="Regulagem Hidráulica" />
           <h2>Regulagem Hidráulica</h2>
-          <p>
-            Clique para dicas!
-          </p>
-        </a>
-        <a href="./pages/tips.html" class="servicesBx">
+          <p>Clique para dicas!</p>
+        </button>
+        <button 
+          class="servicesBx"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#manutencaoModal"
+        >
           <img
             src="./assets/icons/preventiva.png"
             alt="Manutenção Preventiva"
           />
           <h2>Manutenção Preventiva</h2>
-          <p>
-            Clique para dicas!
-          </p>
-        </a>
-        <a href="./pages/tips.html" class="servicesBx">
+          <p>Clique para dicas!</p>
+        </button>
+        <button 
+          class="servicesBx"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#motoresModal"
+        >
           <img src="./assets/icons/motores.png" alt="Motores" />
           <h2>Motores</h2>
-          <p>
-            Clique para dicas!
-          </p>
-        </a>
-        <a href="./pages/tips.html" class="servicesBx">
+          <p>Clique para dicas!</p>
+        </button>
+        <button 
+          class="servicesBx"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#cambioModal"
+        >
           <img src="./assets/icons/cambio.png" alt="Câmbio e Embreagens" />
           <h2>Câmbio e Embreagens</h2>
-          <p>
-            Clique para dicas!
-          </p>
-        </a>
-
+          <p>Clique para dicas!</p>
+        </button>
       </div>
     </section>
     <section id="partners" class="partners">
@@ -178,9 +220,12 @@
       </div>
     </section>
     <section id="contact" class="contact">
-      <div class="heading yellow">
-        <h2>Contato</h2>
-        <p>Possui alguma dúvida sobre nossos serviços, preços ou qualquer outra coisa? Entre em contato!</p>
+      <div class="heading">
+        <h2 class="yellow">Contato</h2>
+        <p>
+          Possui alguma dúvida sobre nossos serviços, preços ou qualquer outra
+          coisa? Entre em contato!
+        </p>
       </div>
       <div class="content">
         <div class="contentBx w50">
@@ -229,11 +274,209 @@
             </button>
           </form>
         </div>
-        <div class="mapBx w50">
-          
-        </div>
+        <div class="mapBx w50"></div>
       </div>
     </section>
+
+    <!-- Modais -->
+      <section>
+        <div class="modal fade" id="balanceamentoModal">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div style="border: 2px solid #F3E11D;"  class="modal-content">
+              <div style="background-color: #F3E11D;" class="modal-header">
+                <h2 class="modal-title heading" id="exampleModalLabel">Alinhamento e Balanceamento</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body red">
+                <h4 class="red">Dicas úteis:</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="modal fade" id="pneuModal">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div style="border: 2px solid #F3E11D;"  class="modal-content">
+              <div style="background-color: #F3E11D;" class="modal-header">
+                <h2 class="modal-title heading" id="exampleModalLabel">Troca de Pneus</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body red">
+                <h4 class="red">Dicas úteis:</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="modal fade" id="arModal">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div style="border: 2px solid #F3E11D;"  class="modal-content">
+              <div style="background-color: #F3E11D;" class="modal-header">
+                <h2 class="modal-title heading" id="exampleModalLabel">Ar Condicionado</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body red">
+                <h4 class="red">Dicas úteis:</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="modal fade" id="direcaoModal">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div style="border: 2px solid #F3E11D;"  class="modal-content">
+              <div style="background-color: #F3E11D;" class="modal-header">
+                <h2 class="modal-title heading" id="exampleModalLabel">Direção Hidráulica</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body red">
+                <h4 class="red">Dicas úteis:</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="modal fade" id="suspensaoModal">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div style="border: 2px solid #F3E11D;"  class="modal-content">
+              <div style="background-color: #F3E11D;" class="modal-header">
+                <h2 class="modal-title heading" id="exampleModalLabel">Suspensão</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body red">
+                <h4 class="red">Dicas úteis:</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="freiosModal">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div style="border: 2px solid #F3E11D;"  class="modal-content">
+              <div style="background-color: #F3E11D;" class="modal-header">
+                <h2 class="modal-title heading" id="exampleModalLabel">Freios</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body red">
+                <h4 class="red">Dicas úteis:</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="escapamentoModal">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div style="border: 2px solid #F3E11D;"  class="modal-content">
+              <div style="background-color: #F3E11D;" class="modal-header">
+                <h2 class="modal-title heading" id="exampleModalLabel">Escapamento</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body red">
+                <h4 class="red">Dicas úteis:</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="oleoModal">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div style="border: 2px solid #F3E11D;"  class="modal-content">
+              <div style="background-color: #F3E11D;" class="modal-header">
+                <h2 class="modal-title heading" id="exampleModalLabel">Troca de Óleo</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body red">
+                <h4 class="red">Dicas úteis:</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="modal fade" id="regulagemModal">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div style="border: 2px solid #F3E11D;"  class="modal-content">
+              <div style="background-color: #F3E11D;" class="modal-header">
+                <h2 class="modal-title heading" id="exampleModalLabel">Regulagem Hidráulica</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body red">
+                <h4 class="red">Dicas úteis:</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="modal fade" id="manutencaoModal">
+          
+          
+          
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div style="border: 2px solid #F3E11D;"  class="modal-content">
+              <div style="background-color: #F3E11D;" class="modal-header">
+                <h2 class="modal-title heading" id="exampleModalLabel">Manutenção Preventiva</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body red">
+                <h4 class="red">Dicas úteis:</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="modal fade" id="motoresModal">
+
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div style="border: 2px solid #F3E11D;"  class="modal-content">
+              <div style="background-color: #F3E11D;" class="modal-header">
+                <h2 class="modal-title heading" id="exampleModalLabel">Motores</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body red">
+                <h4 class="red">Dicas úteis:</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="modal fade" id="cambioModal">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div style="border: 2px solid #F3E11D;"  class="modal-content">
+              <div style="background-color: #F3E11D;" class="modal-header">
+                <h2 class="modal-title heading" id="exampleModalLabel">Câmbio e Embreagens</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body red">
+                <h4 class="red">Dicas úteis:</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </section>
 
     <script type="text/javascript">
       window.addEventListener("scroll", function () {
@@ -241,5 +484,11 @@
         header.classList.toggle("sticky", window.scrollY > 0);
       });
     </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
