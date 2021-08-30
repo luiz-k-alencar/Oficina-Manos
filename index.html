@@ -7,8 +7,12 @@
     <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
@@ -17,21 +21,28 @@
   </head>
   <body>
     <header>
-      <a href="#"><img id="logo" src="./assets/logo.png" alt="logo" /></a>
+      <a href="#home"><img id="logo" src="./assets/logo.png" alt="logo" /></a>
       <div class="toggle"></div>
-      <ul>
+      <ul class="menu">
         <li><a href="#home">Início</a></li>
         <li><a href="#aboutUs">Sobre nós</a></li>
         <li><a href="#services">Serviços</a></li>
+        <li><a href="#location">Localização</a></li>
+        <li><a href="#contact">Contato</a></li>
         <li><a href="#partners">Parceiros</a></li>
-        <li><a href="#">Contato</a></li>
       </ul>
     </header>
     <section id="home" class="banner">
       <div class="textBx">
         <h2>Olá, nós somos a<br /><span>Manos</span></h2>
         <h3>Autocenter e Automecânica.</h3>
-        <a href="#aboutUs" class="aboutUsBtn">Sobre nós</a>
+        <a
+          href="#aboutUs"
+          id="aboutUsBtn"
+          onclick="scrollToAboutUs()"
+          class="aboutUsBtn"
+          >Sobre nós</a
+        >
       </div>
     </section>
     <section id="aboutUs" class="aboutUs">
@@ -39,27 +50,50 @@
         <h2>Sobre nós.</h2>
       </div>
       <div class="content">
-        <div class="contentBx w50">
-          <h3>A Empresa</h3>
-          <p>
-            Fundada em 2004, a Manos Automecânica, atualmente atende veículos
-            nacionais e importados, conta com cerca de 26 funcionários, que
-            diariamente prestam um serviço de qualidade e rigor aos clientes.
+        <div class="contentBx">
+            <h3>A Empresa</h3>
+            <p>
+              Fundada em 2004, a Manos Automecânica, atualmente atende veículos
+              nacionais e importados, conta com cerca de 26 funcionários, que
+              diariamente prestam um serviço de qualidade e rigor aos clientes.
+              <br />
+              Desta forma, a relação existente entre empresa e cliente é uma
+              relação de confiança e credibilidade, que se traduz na satisfação
+              de quem visita e elege os serviços da manos automecanica.
+            </p>
             <br />
-            Desta forma, a relação existente entre empresa e cliente é uma
-            relação de confiança e credibilidade, que se traduz na satisfação de
-            quem visita e elege os serviços da manos automecanica.
-          </p>
-          <br />
-          <h4>Nossa Missão:</h4>
+            <h4>Nossa Visão</h4>
+            <p>
+              Ser a melhor em manutenção de automóveis na região onde atua e uma
+              das marcas mais lembradas no mercado de reparação.
+            </p>
+        </div>
+        <div class="front w50">
+          <img src="./assets/fachada.png" alt="Fachada" />
+        </div>
+      </div>
+      <br />
+      <div class="SecondContentBx">
+        <div class="textBx">
+          <h3>Nossa Missão</h3>
           <p>
-            A nossa missão é a satisfação total do cliente. Resolvemos qualquer
-            problema relacionado ao seu veículo, Buscando atender com prioridade
-            as necessidades e desejos de cada cliente.
+            Satisfação total do cliente. <br />
+            Atender com prioridade as necessidades e
+            desejos de cada cliente. <br />
+            Oferecer as melhores soluções na prestação dos serviços, com a excelência na qualidade e no padrão de atendimento, garantindo a solidez nos negócios e a necessária segurança para clientes, fornecedores e colaboradores.
           </p>
         </div>
-        <div class="w50">
-          <img src="./assets/fachada.png" alt="Fachada" />
+        <br />
+        <div class="textBx">
+          <h3>Nossos Valores</h3>
+          <p>
+            Ética e transparência na condução dos negócios. <br />
+            Busca do aperfeiçoamento contínuo. <br /> 
+            Respeito e valorização de fornecedores e clientes.<br />
+            Valorização de seu maior ativo, os colaboradores. <br />
+            Cumprimento de compromissos.<br />
+            Busca contínua por Qualidade e Segurança.
+          </p>
         </div>
       </div>
     </section>
@@ -68,8 +102,8 @@
         <h2 class="yellow">Nossos serviços</h2>
       </div>
       <div class="content">
-        <button 
-          class="servicesBx" 
+        <button
+          class="servicesBx"
           id="Balanceamento"
           type="button"
           data-bs-toggle="modal"
@@ -79,7 +113,7 @@
           <h2>Alinhamento e Balanceamento</h2>
           <p>Clique para dicas!</p>
         </button>
-        <button 
+        <button
           class="servicesBx"
           type="button"
           data-bs-toggle="modal"
@@ -89,7 +123,7 @@
           <h2>Troca de Pneus</h2>
           <p>Clique para dicas!</p>
         </button>
-        <button 
+        <button
           class="servicesBx"
           type="button"
           data-bs-toggle="modal"
@@ -102,7 +136,7 @@
           <h2>Ar Condicionado</h2>
           <p>Clique para dicas!</p>
         </button>
-        <button 
+        <button
           class="servicesBx"
           type="button"
           data-bs-toggle="modal"
@@ -112,7 +146,7 @@
           <h2>Direção Hidráulica</h2>
           <p>Clique para dicas!</p>
         </button>
-        <button 
+        <button
           class="servicesBx"
           type="button"
           data-bs-toggle="modal"
@@ -122,7 +156,7 @@
           <h2>Suspensão</h2>
           <p>Clique para dicas!</p>
         </button>
-        <button 
+        <button
           class="servicesBx"
           type="button"
           data-bs-toggle="modal"
@@ -132,7 +166,7 @@
           <h2>Freios</h2>
           <p>Clique para dicas!</p>
         </button>
-        <button 
+        <button
           class="servicesBx"
           type="button"
           data-bs-toggle="modal"
@@ -142,7 +176,7 @@
           <h2>Escapamento</h2>
           <p>Clique para dicas!</p>
         </button>
-        <button 
+        <button
           class="servicesBx"
           type="button"
           data-bs-toggle="modal"
@@ -152,7 +186,7 @@
           <h2>Troca de Oléo</h2>
           <p>Clique para dicas!</p>
         </button>
-        <button 
+        <button
           class="servicesBx"
           type="button"
           data-bs-toggle="modal"
@@ -162,7 +196,7 @@
           <h2>Regulagem Hidráulica</h2>
           <p>Clique para dicas!</p>
         </button>
-        <button 
+        <button
           class="servicesBx"
           type="button"
           data-bs-toggle="modal"
@@ -175,7 +209,7 @@
           <h2>Manutenção Preventiva</h2>
           <p>Clique para dicas!</p>
         </button>
-        <button 
+        <button
           class="servicesBx"
           type="button"
           data-bs-toggle="modal"
@@ -185,7 +219,33 @@
           <h2>Motores</h2>
           <p>Clique para dicas!</p>
         </button>
-        <button 
+        <button
+          class="servicesBx"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#injecaoModal"
+        >
+          <img
+            src="./assets/icons/injecao-eletronica.png"
+            alt="Injeção Eletrônica"
+          />
+          <h2>Injeção Eletrônica</h2>
+          <p>Clique para dicas!</p>
+        </button>
+        <button
+          class="servicesBx"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#fluidoModal"
+        >
+          <img
+            src="./assets/icons/cambio-de-marchas.png"
+            alt="Troca de Fluído do Câmbio Automático"
+          />
+          <h2>Troca de Fluído do Câmbio Automático</h2>
+          <p>Clique para dicas!</p>
+        </button>
+        <button
           class="servicesBx"
           type="button"
           data-bs-toggle="modal"
@@ -195,6 +255,139 @@
           <h2>Câmbio e Embreagens</h2>
           <p>Clique para dicas!</p>
         </button>
+      </div>
+    </section>
+    <section id="location" class="location">
+      <div class="heading">
+        <h2>Localização</h2>
+      </div>
+      <div class="content">
+        <div class="addressContainer">
+          <h3>Automecânica</h3>
+          <p>
+            R. Emílio Hule, 272 <br />
+            Marechal Floriano - ES, <br />
+          </p>
+          <div class="mapBx">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.310469923072!2d-40.67801378541222!3d-20.41130105872605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb9b47ffa9ba65f%3A0xfdc3124505404d2c!2sBosch%20Car%20Service%20-%20Manos%20Automec%C3%A2nica!5e0!3m2!1spt-BR!2sbr!4v1629985788544!5m2!1spt-BR!2sbr"
+              class="map"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+        <div class="addressContainer">
+          <h3>Autocenter</h3>
+          <p>
+            R. Thieres Veloso, 78 <br />
+            Marechal Floriano - ES,<br />
+          </p>
+          <div class="mapBx">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.3060717368026!2d-40.67926098541236!3d-20.411482158731843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb9b47f8a4a3d3b%3A0xd7c257eb54585846!2sManos%20Autocenter!5e0!3m2!1spt-BR!2sbr!4v1629985750430!5m2!1spt-BR!2sbr"
+              class="map"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="heading">
+        <h2 class="yellow">Contato</h2>
+        <p class="yellow">
+          Possui alguma dúvida sobre nossos serviços, preços ou qualquer outra
+          coisa? Entre em contato!
+        </p>
+      </div>
+      <div class="content">
+        <div class="contactInfo w50">
+          <h3>Informação de Contato</h3>
+          <div class="contactInfoBx">
+            <!-- EMAIL -->
+            <div class="box">
+              <div class="icon">
+                <i class="fa fa-envelope-o"></i>
+              </div>
+              <div class="contactInfoText">
+                <h3>Email</h3>
+                <p>manos@manosonline.com.br</p>
+              </div>
+            </div>
+            <!-- PHONE -->
+            <div class="box">
+              <div class="icon">
+                <i class="fa fa-phone"></i>
+              </div>
+              <div class="contactInfoText">
+                <h3>Telefone</h3>
+                <p><span class="fw600">Autocenter</span>: (27) 32881389</p>
+                <p><span class="fw600">Automecânica</span>: (27) 32882345</p>
+              </div>
+            </div>
+            <!-- WHATSAPP -->
+            <div class="box">
+              <div class="icon">
+                <i class="fa fa-whatsapp"></i>
+              </div>
+              <div class="contactInfoText">
+                <h3>Whatsapp</h3>
+                <p><span class="fw600">Recepção</span>: (27) 98850-4324</p>
+                <p><span class="fw600">Loja:</span> (27) 98850-4324</p>
+                <p><span class="fw600">Caixa:</span> (27) 98895-5493</p>
+                <p><span class="fw600">Escritório:</span> (27) 98868-0902</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="formBx w50">
+          <h3>Entre em Contato</h3>
+          <form
+            action="https://formsubmit.co/luizkama28@gmail.com"
+            method="POST"
+          >
+            <input
+              placeholder="Nome"
+              class="input"
+              name="name"
+              type="text"
+              id="name"
+              required
+            />
+            <input
+              placeholder="Email"
+              class="input"
+              type="email"
+              name="email"
+              id="email"
+              required
+            />
+
+            <textarea
+              class="input"
+              name="mensagem"
+              id="about"
+              cols="30"
+              rows="10"
+              placeholder="Insira sua mensagem"
+            ></textarea>
+
+            <input
+              type="hidden"
+              name="_next"
+              value="http://127.0.0.1:5500/pages/thankyou.html"
+            />
+            <input type="hidden" name="_subject" value="Email do Site!" />
+
+            <button type="submit" class="input" id="submit" value="Enviar">
+              Enviar
+            </button>
+          </form>
+        </div>
       </div>
     </section>
     <section id="partners" class="partners">
@@ -219,264 +412,938 @@
         </a>
       </div>
     </section>
-    <section id="contact" class="contact">
-      <div class="heading">
-        <h2 class="yellow">Contato</h2>
-        <p>
-          Possui alguma dúvida sobre nossos serviços, preços ou qualquer outra
-          coisa? Entre em contato!
-        </p>
-      </div>
-      <div class="content">
-        <div class="contentBx w50">
-          <form
-            action="https://formsubmit.co/luizkama28@gmail.com"
-            method="POST"
-          >
-            <p class="formSubtitle">Nome:</p>
-            <input
-              placeholder="Nome"
-              class="input"
-              name="name"
-              type="text"
-              id="name"
-              required
-            />
-            <p class="formSubtitle">Email:</p>
-            <input
-              placeholder="Email"
-              class="input"
-              type="email"
-              name="email"
-              id="email"
-              required
-            />
 
-            <p class="formSubtitle">Mensagem:</p>
-            <textarea
-              class="input"
-              name="mensagem"
-              id="about"
-              cols="30"
-              rows="10"
-              placeholder="Insira sua mensagem"
-            ></textarea>
-
-            <input
-              type="hidden"
-              name="_next"
-              value="https://studioritadecassia.com/pages/thankyou.html"
-            />
-            <input type="hidden" name="_subject" value="Email do Site!" />
-
-            <button type="submit" class="input" id="submit" value="Enviar">
-              Enviar
-            </button>
-          </form>
+    <footer class="footer">
+      <div class="footerContent">
+        <div class="logoBx">
+          <a href="#home"><img src="./assets/logo.png" alt="logo" /></a>
         </div>
-        <div class="mapBx w50"></div>
+        <div class="sloganBx">
+          <p><i>"Credibilidade <br> e <br> confiança"</i></p>
+        </div>
+        <div class="mediasBx">
+          <a
+            class="midiasButton"
+            href="https://www.instagram.com/manosautomecanica/"
+            ><img
+              class="midiasLogo"
+              src="./assets/instagram.svg"
+              alt="instagram-logo"
+          /></a>
+          <a
+            class="midiasButton"
+            href="https://web.facebook.com/manosautomecanica/?_rdc=1&_rdr"
+            ><img
+              class="midiasLogo"
+              src="./assets/facebook.svg"
+              alt="instagram-logo"
+          /></a>
+          <a class="midiasButton" href="https://wa.me/+5527988504324/?text=Olá!"
+            ><img
+              class="midiasLogo"
+              src="./assets/whatsapp.svg"
+              alt="instagram-logo"
+          /></a>
+        </div>
       </div>
-    </section>
+    </footer>
+    <div class="copyrightDiv">
+      <a target="_blank" class="linktrButton" href="https://linktr.ee/luiz.lfka">
+        Copiright © por Luiz F K Alencar.
+      </a>
+    </div>
 
     <!-- Modais -->
-      <section>
-        <div class="modal fade" id="balanceamentoModal">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div style="border: 2px solid #F3E11D;"  class="modal-content">
-              <div style="background-color: #F3E11D;" class="modal-header">
-                <h2 class="modal-title heading" id="exampleModalLabel">Alinhamento e Balanceamento</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body red">
-                <h4 class="red">Dicas úteis:</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-              </div>
-            </div>
+    <div class="modal fade" id="balanceamentoModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered height">
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">
+              Alinhamento e Balanceamento
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
-        </div>  
-        <div class="modal fade" id="pneuModal">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div style="border: 2px solid #F3E11D;"  class="modal-content">
-              <div style="background-color: #F3E11D;" class="modal-header">
-                <h2 class="modal-title heading" id="exampleModalLabel">Troca de Pneus</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body red">
-                <h4 class="red">Dicas úteis:</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-              </div>
-            </div>
-          </div>
-        </div>  
-        <div class="modal fade" id="arModal">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div style="border: 2px solid #F3E11D;"  class="modal-content">
-              <div style="background-color: #F3E11D;" class="modal-header">
-                <h2 class="modal-title heading" id="exampleModalLabel">Ar Condicionado</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body red">
-                <h4 class="red">Dicas úteis:</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-              </div>
-            </div>
-          </div>
-        </div>  
-        <div class="modal fade" id="direcaoModal">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div style="border: 2px solid #F3E11D;"  class="modal-content">
-              <div style="background-color: #F3E11D;" class="modal-header">
-                <h2 class="modal-title heading" id="exampleModalLabel">Direção Hidráulica</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body red">
-                <h4 class="red">Dicas úteis:</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-              </div>
-            </div>
-          </div>
-        </div>  
-        <div class="modal fade" id="suspensaoModal">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div style="border: 2px solid #F3E11D;"  class="modal-content">
-              <div style="background-color: #F3E11D;" class="modal-header">
-                <h2 class="modal-title heading" id="exampleModalLabel">Suspensão</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body red">
-                <h4 class="red">Dicas úteis:</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-              </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <p>
+              • Faça rodízio de pneus a cada 5.000 km, e alinhe e balanceie 2 a
+              3 vezes ao ano, pois o gasto compensa pela vida útil de seu pneu.
+            </p>
+            <p>
+              • Buracos e guias são os seus maiores inimigos das rodas dos
+              veículos. Elas amassam e entortam em choques mais fortes e só uma
+              troca resolve o problema. Rodas em bom estado e pneus com
+              especificação correta, devidamente calibrados, evitam desgastes,
+              melhoram a segurança e economizam combustível.
+            </p>
+            <p>
+              • Calibre os pneus do carro quando eles estiverem frios, seguindo
+              as instruções do fabricante. Caso você já tenha rodado mais que 2
+              km. os pneus já deverão estar aquecidos, nesse caso, ao calibrar
+              os pneus coloque 2 libras acima da recomendada pelo fabricante.
+            </p>
+            <p>
+              • Os projetos de pneus modernos raramente permitem que eles
+              estourem, mesmo assim, sempre é bom examiná-los para verificar o
+              surgimento de bolhas ou rachaduras, que podem ser causadas por
+              impactos em buracos ou guias.
+            </p>
+            <div class="btnTipsBx" style="padding: 10px">
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#travelModal"
+              >
+                Dicas de Viagem
+              </button>
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#whatToDoModal"
+              >
+                O que você pode fazer pelo seu carro?
+              </button>
             </div>
           </div>
         </div>
-        <div class="modal fade" id="freiosModal">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div style="border: 2px solid #F3E11D;"  class="modal-content">
-              <div style="background-color: #F3E11D;" class="modal-header">
-                <h2 class="modal-title heading" id="exampleModalLabel">Freios</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body red">
-                <h4 class="red">Dicas úteis:</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-              </div>
+      </div>
+    </div>
+    <div class="modal fade" id="pneuModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">
+              Troca de Pneus
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <div class="btnTipsBx">
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#travelModal"
+              >
+                Dicas de Viagem
+              </button>
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#whatToDoModal"
+              >
+                O que você pode fazer pelo seu carro?
+              </button>
             </div>
           </div>
         </div>
-        <div class="modal fade" id="escapamentoModal">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div style="border: 2px solid #F3E11D;"  class="modal-content">
-              <div style="background-color: #F3E11D;" class="modal-header">
-                <h2 class="modal-title heading" id="exampleModalLabel">Escapamento</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body red">
-                <h4 class="red">Dicas úteis:</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-              </div>
+      </div>
+    </div>
+    <div class="modal fade" id="arModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">
+              Ar Condicionado
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <div class="btnTipsBx">
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#travelModal"
+              >
+                Dicas de Viagem
+              </button>
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#whatToDoModal"
+              >
+                O que você pode fazer pelo seu carro?
+              </button>
             </div>
           </div>
         </div>
-        <div class="modal fade" id="oleoModal">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div style="border: 2px solid #F3E11D;"  class="modal-content">
-              <div style="background-color: #F3E11D;" class="modal-header">
-                <h2 class="modal-title heading" id="exampleModalLabel">Troca de Óleo</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body red">
-                <h4 class="red">Dicas úteis:</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-              </div>
+      </div>
+    </div>
+    <div class="modal fade" id="direcaoModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">
+              Direção Hidráulica
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <div class="btnTipsBx">
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#travelModal"
+              >
+                Dicas de Viagem
+              </button>
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#whatToDoModal"
+              >
+                O que você pode fazer pelo seu carro?
+              </button>
             </div>
           </div>
-        </div>  
-        <div class="modal fade" id="regulagemModal">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div style="border: 2px solid #F3E11D;"  class="modal-content">
-              <div style="background-color: #F3E11D;" class="modal-header">
-                <h2 class="modal-title heading" id="exampleModalLabel">Regulagem Hidráulica</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body red">
-                <h4 class="red">Dicas úteis:</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-              </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="suspensaoModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">
+              Suspensão
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <p>
+              • Ao ouvir barulhos estranhos ao passar em lombadas, buraco e
+              mesmo em lugares planos, pare o mais urgente possível, para
+              verificar, pois barulhos indicam peças que podem estar se
+              soltando, ou quebradas, ou desgastadas. Lembre-se é você e sua
+              família que podem estar correndo perigo.
+            </p>
+            <div class="btnTipsBx" style="padding: 10px">
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#travelModal"
+              >
+                Dicas de Viagem
+              </button>
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#whatToDoModal"
+              >
+                O que você pode fazer pelo seu carro?
+              </button>
             </div>
           </div>
-        </div>  
-        <div class="modal fade" id="manutencaoModal">
-          
-          
-          
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div style="border: 2px solid #F3E11D;"  class="modal-content">
-              <div style="background-color: #F3E11D;" class="modal-header">
-                <h2 class="modal-title heading" id="exampleModalLabel">Manutenção Preventiva</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body red">
-                <h4 class="red">Dicas úteis:</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-              </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="freiosModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">Freios</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <p>
+              • Sempre ao sair com o carro, faça um teste rápido nos freios,
+              brecando em um curto espaço, para sentir se está parando, pois é a
+              sua segurança que esta em jogo.
+            </p>
+            <p>
+              • Faça sempre uma revisão mensal nos freios, pois é muito simples
+              e rápido verificar o estado de pastilhas e lonas de seu veículo,
+              calibre os pneus de carro semanalmente, e se sempre estiver muito
+              baixo é sinal que algum furo ou vazamento da válvula pode estar
+              ocorrendo.
+            </p>
+            <div class="btnTipsBx" style="padding: 10px">
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#travelModal"
+              >
+                Dicas de Viagem
+              </button>
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#whatToDoModal"
+              >
+                O que você pode fazer pelo seu carro?
+              </button>
             </div>
           </div>
-        </div>  
-        <div class="modal fade" id="motoresModal">
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="escapamentoModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">
+              Escapamento
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <div class="btnTipsBx">
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#travelModal"
+              >
+                Dicas de Viagem
+              </button>
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#whatToDoModal"
+              >
+                O que você pode fazer pelo seu carro?
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="oleoModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">
+              Troca de Óleo
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <p>
+              • Verifique sempre o nível de óleo de freio, óleo de motor e
+              liquido de radiador (semanalmente).
+            </p>
+            <p>
+              • Nunca complete o óleo de motor ou câmbio, ou qualquer outro que
+              seja, por um que não seja da mesma especificação
+            </p>
+            <div class="btnTipsBx" style="padding: 10px">
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#travelModal"
+              >
+                Dicas de Viagem
+              </button>
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#whatToDoModal"
+              >
+                O que você pode fazer pelo seu carro?
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="regulagemModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">
+              Regulagem Hidráulica
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <div class="btnTipsBx">
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#travelModal"
+              >
+                Dicas de Viagem
+              </button>
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#whatToDoModal"
+              >
+                O que você pode fazer pelo seu carro?
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="manutencaoModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">
+              Manutenção Preventiva
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <p>
+              • Filtros de combustível e ar são de suma importância para todos
+              os veículos, por isso efetue a troca conforme o manual do veiculo.
+            </p>
+            <p>
+              • Verifique sempre a carga da bateria de seu veículo, para que ele
+              não lhe traga dor de cabeça na hora que você mais precisar
+              dele.(mensalmente).
+            </p>
+            <p>
+              • Para evitar riscos precoces, nunca ligue o limpador de
+              pára-brisa quando o vidro estiver seco. Ele normalmente acumula
+              poeira, óleo e outras sujeiras. Para lavar os vidros, utilize
+              sempre muita água com detergente suave ou limpa-vidros.
+            </p>
+            <p>
+              • O bom funcionamento das luzes é fundamental em um veículo e pode
+              evitar situações de perigo. E não só os faróis. Lanternas, piscas,
+              luzes de freio e de ré, iluminação interna, luzes do painel, bem
+              como a fonte de energia - a bateria -, devem ser constantemente
+              checados para que não haja surpresas.
+            </p>
+            <div class="btnTipsBx" style="padding: 10px">
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#travelModal"
+              >
+                Dicas de Viagem
+              </button>
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#whatToDoModal"
+              >
+                O que você pode fazer pelo seu carro?
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="motoresModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">Motores</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <p>
+              • Evitar dar trancos para fazer o carro pegar, pois é muito danoso
+              para a correia dentada, correndo um sério risco dela partir em
+              pedaços, e danificar partes internas do motor.
+            </p>
+            <p>
+              • O Catalisador é um dispositivo instalado no escapamento com a
+              função de transformar substâncias poluentes em gases menos nocivos
+              à atmosfera. Dependendo da qualidade do combustível utilizado,
+              pode durar 80000 quilômetros.
+            </p>
+            <div class="btnTipsBx" style="padding: 10px">
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#travelModal"
+              >
+                Dicas de Viagem
+              </button>
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#whatToDoModal"
+              >
+                O que você pode fazer pelo seu carro?
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="cambioModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">
+              Câmbio e Embreagens
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <div class="btnTipsBx">
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#travelModal"
+              >
+                Dicas de Viagem
+              </button>
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#whatToDoModal"
+              >
+                O que você pode fazer pelo seu carro?
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="fluidoModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">
+              Câmbio e Embreagens
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <div class="btnTipsBx">
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#travelModal"
+              >
+                Dicas de Viagem
+              </button>
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#whatToDoModal"
+              >
+                O que você pode fazer pelo seu carro?
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="injecaoModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">
+              Injeção Eletrônica
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <p>
+              • Para carros de sistema de injeção eletrônica, não é aconselhável
+              rodar com combustível abaixo de 1/4 de tanque.
+            </p>
+            <p>
+              • Nunca mande lavar o motor com o veiculo quente, principalmente
+              se tiver sistema injeção eletrônica.
+            </p>
+            <div class="btnTipsBx" style="padding: 10px">
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#travelModal"
+              >
+                Dicas de Viagem
+              </button>
+              <button
+                type="button"
+                class="tipsBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#whatToDoModal"
+              >
+                O que você pode fazer pelo seu carro?
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="whatToDoModal">
+      <div
+        class="
+          modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable
+        "
+      >
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">
+              O que você pode fazer pelo seu carro?
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <p>
+              Realizar a manutenção preventiva do veículo não significa apenas
+              visitar o mecânico periodicamente. Existem tarefas que você pode
+              fazer e que não exigem prática, apenas disposição. E o que é
+              melhor: esse procedimento não só ajuda a manter o carro, como
+              também reduz a possibilidade de problemas mais graves no futuro.
+              Veja a seguir quais são esses cuidados:
+            </p>
+            <h5>Toda semana</h5>
+            <h6>Fluido do Freio</h6>
+            <p>
+              Como o reservatório é transparente e possui indicações de mínimo e
+              máximo, basta dar uma olhada. Se o nível estiver abaixo da marca
+              mínima, complete com o fluido recomendado pelo fabricante do
+              veículo.
+            </p>
+            <p>
+              <b>Atenção</b>: por possuir propriedades higroscópicas, ou seja,
+              abserver a umidade ambiente, mantenha o reservatório sempre
+              fechado e limpo, pois tanto a umidade como a sujeira podem
+              comprometer as características do fluido e prejudicar a ação do
+              freio. Confira uma vez por semana.
+            </p>
+            <h6>Lavadores dos vidros</h6>
+            <p>
+              Nada pior do que descobrir que se está sem água nos limpadores dos
+              vidros quando se mais precisa dela. Por isso, crie o hábito de
+              conferir semanalmente se é preciso completar a água dos
+              limpadores. Acrescente também um pouco de detergente específico.
+              Não use detergente doméstico, pois esses produtos contém soda
+              cáustica em sua formulação, o que pode ocasionar manchas na
+              pintura, além de formação de borra no reservatório, entupindo os
+              lavadores.
+            </p>
+            <h6>Líquido de arrefecimento</h6>
+            <p>
+              Observe o vaso de expansão (consulte o manual do proprietário para
+              saber sua localização). Se estiver abaixo do nível mínimo,
+              adicione água com o líquido de arrefecimento na proporção
+              recomendada pelo fabricante.
+            </p>
+            <p>
+              O ideal é que a verificação seja feita com o motor frio, mas, se
+              não for possível, tome cuidado na hora de abrir o reservatório. O
+              sistema é pressurizado, e a água quente pode espirrar se você o
+              abrir de repente. Se for necessário completar o nível com muita
+              freqüência, verifique se há vazamento no sistema.
+            </p>
+            <h6>Óleo do motor</h6>
+            <p>
+              Verifique o nível do óleo do cárter uma vez por semana, com o
+              veículo sobre uma superfície plana e, de preferência, com o motor
+              frio. Se não for possível, aguarde cerca de cinco minutos antes de
+              checar. Confira no manual a localização da vareta, limpe-a e volte
+              a colocá-la no lugar. Tire novamente e cheque o nível, que deve
+              estar entre as marcas de mínimo e máximo.
+            </p>
+            <p>
+              Se o nível estiver baixo, complete, utilizando um produto com a
+              especificação recomandade pelo fabricante do veículo. Se houver
+              óleo acima do nível máximo, será necessário retirar o excesso por
+              meio do bujão do cárter -- na parte inferior do motor -- ou com
+              uma máquina de troca de óleo por sucção.
+            </p>
+            <p>
+              <b>Atenção</b>: limpe a vareta com um pano que não solte fiapos,
+              para evitar que estes penetrem no motor.
+            </p>
+            <h6>Pressão dos pneus</h6>
+            <p>
+              Deve ser verificada semanalmente, ou antes de viajar, seguindo a
+              indicação do manual do proprietário. Lembre-se de que os pneus
+              devem estar frios, ou seja, não devem ter rodado mais do que 3
+              quilômetros. Acima dessa distância, o atrito dos pneus com o solo
+              aquece o ar interno, que se expande e distorce a calibragem. Não
+              se esqueça de checar também a pressão do estepe.
+            </p>
+            <h5>Todo mês</h5>
+            <h6>Fluido da direção hidráulica</h6>
+            <p>
+              Cheque o nível uma vez por mês. Para isso, basta abrir o
+              reservatório e conferir, por meio do medidor existente na própria
+              tampa. Se for necessário, complete com o óleo indicado pelo
+              fabricante no manual do proprietário.
+            </p>
+            <h6>Lâmpadas</h6>
+            <p>
+              Verifique o funcionamento das lâmpadas e substitua, se houve
+              necessidade. O processo é simplesmas deve se ter cuidado ao
+              manusear a lâmpada nova, principalmente se for dos faróis.
+            </p>
+            <p>
+              Evite tocar o bulbo, pois a oleosidade natural da pele vai tornar
+              o vidro amarelado, reduzindo sua eficiência e até mesmo diminuindo
+              a vida útil. Se for inevitável, limpe a lâmpada depois, com um
+              pano umedecido com álcool.
+            </p>
+            <h5>Todo ano</h5>
+            <h6>Palhetas dos limpadores</h6>
+            <p>
+              Providencie a substituição das palhetas uma vez por ano. Se a
+              borracha do limpador estiver ressecada ou danificada, a palheta
+              perde eficiência e pode riscar o pára-brisas. Para trocar a
+              palheta, basta desencaixar a peça antiga e encaixar a nova, num
+              processo rápido que não exige experiência. Lembre-se apenas de
+              adquirir um produto específico para o seu automóvel.
+            </p>
+            <h6>Bateria</h6>
+            <p>
+              Se os pólos da bateria estiverem cobertos por uma espécie de pó
+              esverdeado, não se assuste. Trata-se do zinabre ou azinhavre,
+              produto resultante da oxidação dos terminais dos cabos, causado
+              pelo ácido do interior da bateria. O problema é comum e não indica
+              nenhum defeito. Para eliminá-lo, limpe os pólos com uma escova e
+              lubrifique-os com uma leve camada de graxa branca ou vaselina,
+              antes de religar os terminais.
+            </p>
+            <h6>Filtro de ar</h6>
+            <p>
+              Veja no manual do veículo a localização do compartimento do filtro
+              e confira seu estado mensalmente. Um filtro de ar dura
+              aproximadamente 10 000 quilômetros, mas quem trafega em locais
+              muito empoeirados ou por estradas de terra, deve trocá-lo com mais
+              freqüência. Em alguns casos, leves pancadas são suficientes para
+              limpá-lo e dar uma sobrevida ao filtro. Não se deve usar jatos de
+              ar comprimido, pois isso pode danificar o elementro filtrante, que
+              é de papel.
+            </p>
+            <h6>Fusíveis</h6>
+            <p>
+              Se o farol não ascende e a lâmpada não está queimada, então a
+              causa geralmente deve ser fo fusível. Confira no manual do veículo
+              a localização do compartimento de fusíveis. A seguir, verifique
+              qual deles é o responsável pelos faróis, retire-o e substitua por
+              um novo.
+            </p>
+            <p>
+              <b>Atenção</b>: não improvise com fusíveis de amperagem diferente
+              ou outro tipo de material (arame, papel aluminizado). Isso pode
+              causar sérios danos ao sistema elétrico do automóvel, além de
+              proporcionar risco de curto-circuito e até mesmo incêndio.
+            </p>
+            <h5>Mais</h5>
 
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div style="border: 2px solid #F3E11D;"  class="modal-content">
-              <div style="background-color: #F3E11D;" class="modal-header">
-                <h2 class="modal-title heading" id="exampleModalLabel">Motores</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body red">
-                <h4 class="red">Dicas úteis:</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-              </div>
-            </div>
+            <h6>Outras verificações</h6>
+            <p>
+              Além dos procedimentos descritos até aqui, existem outros, como o
+              alinhamento da direção, balanceamento de rodas, troca de óleo,
+              filtros e velas, por exemplo, que também não podem ser esquecidos,
+              mas que, por sua complexidade ou necessidade de equipamentos
+              específicos, devem ser feitos por um mecânico.
+            </p>
+            <p>
+              Consulte sempre o manual do proprietário para saber não só os
+              prazos recomendados para a manutenção preventiva, como também os
+              produtos e as especificações certas para o seu carro.
+            </p>
           </div>
-        </div>  
-        <div class="modal fade" id="cambioModal">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div style="border: 2px solid #F3E11D;"  class="modal-content">
-              <div style="background-color: #F3E11D;" class="modal-header">
-                <h2 class="modal-title heading" id="exampleModalLabel">Câmbio e Embreagens</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body red">
-                <h4 class="red">Dicas úteis:</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur exercitationem, vero nisi libero at dolor quis magni velit iure pariatur ab? Id pariatur deserunt quos, cupiditate officiis et minima autem!</p>
-              </div>
-            </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="travelModal">
+      <div
+        class="
+          modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable
+        "
+      >
+        <div style="border: 2px solid #f3e11d" class="modal-content">
+          <div style="background-color: #f3e11d" class="modal-header">
+            <h2 class="modal-title heading" id="exampleModalLabel">
+              Dicas de Viagem
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
-        </div>  
-      </section>
+          <div class="modal-body red">
+            <h4 class="red">Dicas úteis:</h4>
+            <p>
+              • Ao perceber que não conseguirá evitar um buraco, mantenha o
+              volante reto e não pise bruscamente no freio. Isso fará com que a
+              pancada seja transmitida ao pneu e não diretamente à suspensão.
+              Pisar na embreagem evitará danos ao câmbio, mas aliviar a pressão
+              no acelerador já ajuda a diminuir o prejuízo.
+            </p>
+            <p>
+              • Na cidade, não ande muito perto do carro da frente. Na estrada,
+              você deve estar, no mínimo, a 2 carros de distância do veículo à
+              sua frente. Isso assegura uma margem para evitar possíveis
+              colisões. Para manter a distância correta, olhe para a traseira do
+              carro da frente. Se não enxergar os pneus, só o pára-choque você
+              está perto demais.
+            </p>
+            <p>
+              • Na dúvida, sempre dê preferência aos pedestres. Respeite e
+              obedeça a faixa de travessia, onde eles têm toda a prioridade. No
+              trânsito, esteja sempre atento em ruas e avenidas movimentadas
+              para conseguir prever as atitudes que o pedestre vai tomar e poder
+              reagir a tempo.
+            </p>
+            <p>
+              • Com pista molhada, uma fina camada de água pode se formar entre
+              os pneus e o solo, fazendo com que o carro perca a aderência e
+              deslize sem nenhum controle. Esse problema acontece a partir dos
+              50 km/h, em geral, mas depende do volume de água. Se for muito
+              grande, ela pode ocorrer até em velocidades menores, a partir dos
+              30 km/h.
+            </p>
+            <p>
+              • Na compra de um carro, em geral o proprietário recebe duas
+              cópias das chaves e a numeração secreta dos códigos para a
+              confecção de uma terceira, caso uma das duas se extravie. Guarde
+              sempre sua cópia em um lugar de fácil acesso. Possuir as duas
+              chaves também valoriza seu carro na hora da venda. Se precisar,
+              prefira fazer a cópia da chave em uma concessionária autorizada
+              pela montadora do seu veículo.
+            </p>
+            <p>
+              • Para tentar evitar, esteja sempre atento aos carros que estão ao
+              seu lado e à sua frente. Eles poderão fechá-lo em manobras
+              repentinas e sem aviso, como mudanças de faixa ao encostar para
+              apanhar um pedestre ou mesmo ao dobrar a esquina.
+            </p>
+            <p>
+              • Se não tiver estepe, extintor de incêndio e o triângulo de
+              sinalização no carro, você pode ser multado, já que a legislação
+              obriga a tê-los. Equipamentos como macaco ou chave de roda são de
+              apoio, mas não são obrigatórios. Porém, todos são de extrema
+              utilidade e nunca podem faltar em um veículo.
+            </p>
+            <p>
+              • Peça fundamental para a segurança do motorista e dos passageiros
+              o Cinto de Segurança é um item de uso obrigatório por lei.
+              Verifique sempre se os engates e os pontos de fixação da peça
+              estão bem conservados e presos. As tiras devem estar bem
+              costuradas e sem folgas. Os mecanismos também devem ser
+              constantemente lubrificados.
+            </p>
+            <p>
+              • Os bancos do veiculo mesmo os revestidos de tecido sintético,
+              que são bem mais resistentes, mancham. Vazamentos de produtos
+              químicos, alimentos líquidos ou pastosos e barro encabeçam a lista
+              dos maiores responsáveis pela sujeira.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script type="text/javascript">
       window.addEventListener("scroll", function () {
@@ -490,5 +1357,17 @@
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./js/smoothScroll.js"></script>
+    <script src="./js/aboutUsBtnSmooth.js"></script>
+
+
+    <!-- 
+    
+      Made by Luiz Alencar🦉
+    
+    -->
+
+
   </body>
 </html>

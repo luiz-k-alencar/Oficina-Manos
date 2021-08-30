@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900%display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
 
 *{
   font-family: 'Poppins', sans-serif;
@@ -17,6 +18,14 @@ section{
 
 .red{
   color: #A50021;
+}
+
+.fw600{
+  font-weight: 600;
+}
+
+.w50{
+  min-width: 50%;
 }
 
 /* HEADER */
@@ -67,6 +76,7 @@ header ul li a {
   font-weight: 500;
   color: #A50021;
   margin: 0px 15px;
+  text-align: center;
 }
 
 header ul li a:hover{
@@ -150,6 +160,7 @@ header.sticky ul li a:hover{
 
 .content{
   justify-content: space-between;
+  text-align: justify;
   display: flex;
 }
 
@@ -168,12 +179,30 @@ header.sticky ul li a:hover{
   font-weight: 700;
 }
 
-.w50{
-  min-width: 50%;
+.front{
+  height: 330px;
 }
 
 img{
   max-width: 100%;
+}
+
+.SecondContentBx{
+  flex-direction: row;
+  color: #A50021;
+  display: flex;
+}
+
+.textBx{
+  padding-right: 30px;
+  text-align: justify;
+  width: 50%;
+}
+
+.textBx h3{
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 24px;
 }
 
 /* SERVICES */
@@ -224,6 +253,167 @@ img{
   width: 100%;
 }
 
+.btnTipsBx{
+  justify-content: space-evenly;
+  display: flex;
+  padding: 50px;
+}
+
+.tipsBtn{
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #A50021;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 200ms;
+  color: #F3E11D;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.tipsBtn:hover{
+  text-decoration: none;
+  background: #F3E11D;
+  font-weight: bold; 
+  color: #A50021;
+}
+
+/* LOCATION */
+
+.addressContainer{
+  padding: 30px 70px;
+  text-align: center;
+  background: #fff;
+  margin-left: 10px;
+  transition: 500ms;
+}
+.addressContainer:hover{
+  background: #F3E11D;
+}
+
+.addressContainer h3{
+  font-weight: 600;
+  color: #A50021;
+}
+
+.addressContainer p{
+  color: #A50021;
+}
+
+.map{
+  height: 300px;
+  width: 400px;
+}
+
+/* CONTACT */
+
+.contact{
+  background: #A50021;
+}
+
+.contactInfo h3,
+.formBx h3{
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.contactInfoBx{
+  position: relative;
+}
+
+.contactInfoBx .box{
+  position: relative;
+  padding: 20px 0px;
+  display: flex;
+}
+
+.contactInfoBx .box .icon{
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 24px;
+  min-width: 40px;
+  color: #fff;
+  display: flex;
+  padding: 4px;
+}
+
+.contactInfoBx .addressContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.contactInfoBx .addressContainer .addressBx p{
+  margin: 0 50px 0 10px;
+}
+
+.contactInfoBx .box .contactInfoText{
+  flex-direction: column;
+  margin-left: 20px;
+  font-weight: 300;
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+}
+
+.contactInfoBx .box .contactInfoText h3{
+  font-weight: 500;
+  color: #F3E11D;
+}
+
+.formBx form{
+  flex-direction: column;
+  margin-top: 30px;
+  display: flex;
+}
+
+.formBx form input,
+.formBx form textarea{
+  background: #c30f33;
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding: 15px;
+  color: #fff;
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+.formBx form textarea{
+  min-height: 200px;
+  height: unset;
+}
+
+.formBx form input::placeholder,
+.formBx form textarea::placeholder  {
+  color: rgb(212, 212, 212);
+}
+
+.formBx form button{
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  background: #c30f33;
+  letter-spacing: 2px;
+  padding: 10px 30px;
+  position: relative;
+  transition: 200ms;
+  color: #F3E11D;
+  font-weight: 500;
+  font-size: 18px;
+  width: 150px;
+}
+
+.formBx form button:hover{
+  text-decoration: none;
+  background: #F3E11D;
+  font-weight: bold; 
+  color: #A50021;
+}
+
 /* PARTNERS */
 
 .partners .content{
@@ -239,15 +429,89 @@ img{
   margin: 20px;
 }
 
-/* CONTACT */
+/* FOOTER */
 
-.contact{
+.footer{
   background: #A50021;
+  display: flex;
+  padding: 50px;
+  width: 100%;
 }
 
-.square{
-
-  width: 100px;
-  height: 100px;
-  background:#fff
+.footerContent{
+  justify-content: space-between;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
 }
+
+.logoBx{
+  margin-left: 100px;
+}
+
+.logoBx a img{
+  background: #fff;
+  padding: 5px;
+} 
+
+.sloganBx{
+  position: relative; 
+  text-align: center;
+  line-height: 1em;
+  font-weight: 600;
+  font-size: 24px;
+  display: flex;
+  color: #fff;
+}
+
+.sloganBx p{
+  transform: translateY(-50%);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  top: 50%;
+}
+
+.mediasBx{
+  justify-content: center;
+  flex-direction: row;
+  margin-right: 100px;
+  align-items: center;
+  display: flex;
+}
+
+.mediasBx a img {
+  border-radius: 10px;
+  text-align: left;
+  margin: 15px;
+  width: 35px;
+}
+
+/* COPYRIGHT */
+
+.copyrightDiv {
+  background-color: #F3E11D;
+  text-align: center;
+  padding: 2px;
+}
+
+.linktrButton {
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 200ms;
+  font-weight: 500;
+  color: #A50021;
+  padding: 2px;
+
+}
+
+.linktrButton:hover {
+  background-color: #A50021;
+  font-weight: bold;
+  color: #F3E11D;
+  padding: 3px;
+}
+
+/* RESPONSIVE */
+
