@@ -22,14 +22,14 @@
   <body>
     <header>
       <a href="#home"><img id="logo" src="./assets/logo.png" alt="logo" /></a>
-      <div class="toggle"></div>
+      <div class="toggle" onclick="toggleMenu();"></div>
       <ul class="menu">
-        <li><a href="#home">Início</a></li>
-        <li><a href="#aboutUs">Sobre nós</a></li>
-        <li><a href="#services">Serviços</a></li>
-        <li><a href="#location">Localização</a></li>
-        <li><a href="#contact">Contato</a></li>
-        <li><a href="#partners">Parceiros</a></li>
+        <li><a href="#home" onclick="toggleMenu();" >Início</a></li>
+        <li><a href="#aboutUs" onclick="toggleMenu();" >Sobre nós</a></li>
+        <li><a href="#services" onclick="toggleMenu();" >Serviços</a></li>
+        <li><a href="#location" onclick="toggleMenu();" >Localização</a></li>
+        <li><a href="#contact" onclick="toggleMenu();" >Contato</a></li>
+        <li><a href="#partners" onclick="toggleMenu();" >Parceiros</a></li>
       </ul>
     </header>
     <section id="home" class="banner">
@@ -51,48 +51,72 @@
       </div>
       <div class="content">
         <div class="contentBx">
-            <h3>A Empresa</h3>
-            <p>
-              Fundada em 2004, a Manos Automecânica, atualmente atende veículos
-              nacionais e importados, conta com cerca de 26 funcionários, que
-              diariamente prestam um serviço de qualidade e rigor aos clientes.
-              <br />
-              Desta forma, a relação existente entre empresa e cliente é uma
-              relação de confiança e credibilidade, que se traduz na satisfação
-              de quem visita e elege os serviços da manos automecanica.
-            </p>
+          <h3>A Empresa</h3>
+          <p>
+            Fundada em 2004, a Manos Automecânica, atualmente atende veículos
+            nacionais e importados, conta com cerca de 26 funcionários, que
+            diariamente prestam um serviço de qualidade e rigor aos clientes.
             <br />
-            <h4>Nossa Visão</h4>
-            <p>
-              Ser a melhor em manutenção de automóveis na região onde atua e uma
-              das marcas mais lembradas no mercado de reparação.
-            </p>
+            Desta forma, a relação existente entre empresa e cliente é uma
+            relação de confiança e credibilidade, que se traduz na satisfação de
+            quem visita e elege os serviços da manos automecanica.
+          </p>
+          <br />
+          <h3>Nossa Visão</h3>
+          <p>
+            Ser a melhor em manutenção de automóveis na região onde atua e uma
+            das marcas mais lembradas no mercado de reparação.
+          </p>
+          <br />
+          <h3 class="displayNone">Nossa Missão</h3>
+          <p class="displayNone">
+            Satisfação total do cliente. <br />
+            Atender com prioridade as necessidades e desejos de cada cliente.
+            <br />
+            Oferecer as melhores soluções na prestação dos serviços, com a
+            excelência na qualidade e no padrão de atendimento, garantindo a
+            solidez nos negócios e a necessária segurança para clientes,
+            fornecedores e colaboradores.
+          </p>
+          <br />
+          <h3 class="displayNone">Nossos Valores</h3>
+          <p class="displayNone">
+            Cumprimento de compromissos.<br />
+            Busca do aperfeiçoamento contínuo. <br />
+            Busca contínua por Qualidade e Segurança. <br />
+            Ética e transparência na condução dos negócios. <br />
+            Valorização de seu maior ativo, os colaboradores. <br />
+            Respeito e valorização de fornecedores e clientes.<br />
+          </p>
         </div>
         <div class="front w50">
           <img src="./assets/fachada.png" alt="Fachada" />
         </div>
       </div>
       <br />
-      <div class="SecondContentBx">
+      <div class="secondContentBx">
         <div class="textBx">
           <h3>Nossa Missão</h3>
           <p>
             Satisfação total do cliente. <br />
-            Atender com prioridade as necessidades e
-            desejos de cada cliente. <br />
-            Oferecer as melhores soluções na prestação dos serviços, com a excelência na qualidade e no padrão de atendimento, garantindo a solidez nos negócios e a necessária segurança para clientes, fornecedores e colaboradores.
+            Atender com prioridade as necessidades e desejos de cada cliente.
+            <br />
+            Oferecer as melhores soluções na prestação dos serviços, com a
+            excelência na qualidade e no padrão de atendimento, garantindo a
+            solidez nos negócios e a necessária segurança para clientes,
+            fornecedores e colaboradores.
           </p>
         </div>
         <br />
         <div class="textBx">
           <h3>Nossos Valores</h3>
           <p>
-            Ética e transparência na condução dos negócios. <br />
-            Busca do aperfeiçoamento contínuo. <br /> 
-            Respeito e valorização de fornecedores e clientes.<br />
-            Valorização de seu maior ativo, os colaboradores. <br />
             Cumprimento de compromissos.<br />
-            Busca contínua por Qualidade e Segurança.
+            Busca do aperfeiçoamento contínuo. <br />
+            Busca contínua por Qualidade e Segurança. <br />
+            Ética e transparência na condução dos negócios. <br />
+            Valorização de seu maior ativo, os colaboradores. <br />
+            Respeito e valorização de fornecedores e clientes.<br />
           </p>
         </div>
       </div>
@@ -347,7 +371,7 @@
         <div class="formBx w50">
           <h3>Entre em Contato</h3>
           <form
-            action="https://formsubmit.co/luizkama28@gmail.com"
+            action="https://formsubmit.co/manos@manosonline.com.br"
             method="POST"
           >
             <input
@@ -419,7 +443,13 @@
           <a href="#home"><img src="./assets/logo.png" alt="logo" /></a>
         </div>
         <div class="sloganBx">
-          <p><i>"Credibilidade <br> e <br> confiança"</i></p>
+          <p>
+            <i
+              >"Credibilidade <br />
+              e <br />
+              confiança"</i
+            >
+          </p>
         </div>
         <div class="mediasBx">
           <a
@@ -448,14 +478,18 @@
       </div>
     </footer>
     <div class="copyrightDiv">
-      <a target="_blank" class="linktrButton" href="https://linktr.ee/luiz.lfka">
+      <a
+        target="_blank"
+        class="linktrButton"
+        href="https://linktr.ee/luiz.lfka"
+      >
         Copiright © por Luiz F K Alencar.
       </a>
     </div>
 
     <!-- Modais -->
     <div class="modal fade" id="balanceamentoModal">
-      <div class="modal-dialog modal-lg modal-dialog-centered height">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable height">
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
             <h2 class="modal-title heading" id="exampleModalLabel">
@@ -516,7 +550,7 @@
       </div>
     </div>
     <div class="modal fade" id="pneuModal">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
             <h2 class="modal-title heading" id="exampleModalLabel">
@@ -554,7 +588,7 @@
       </div>
     </div>
     <div class="modal fade" id="arModal">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
             <h2 class="modal-title heading" id="exampleModalLabel">
@@ -592,7 +626,7 @@
       </div>
     </div>
     <div class="modal fade" id="direcaoModal">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
             <h2 class="modal-title heading" id="exampleModalLabel">
@@ -630,7 +664,7 @@
       </div>
     </div>
     <div class="modal fade" id="suspensaoModal">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
             <h2 class="modal-title heading" id="exampleModalLabel">
@@ -675,7 +709,7 @@
       </div>
     </div>
     <div class="modal fade" id="freiosModal">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
             <h2 class="modal-title heading" id="exampleModalLabel">Freios</h2>
@@ -723,7 +757,7 @@
       </div>
     </div>
     <div class="modal fade" id="escapamentoModal">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
             <h2 class="modal-title heading" id="exampleModalLabel">
@@ -761,7 +795,7 @@
       </div>
     </div>
     <div class="modal fade" id="oleoModal">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
             <h2 class="modal-title heading" id="exampleModalLabel">
@@ -807,7 +841,7 @@
       </div>
     </div>
     <div class="modal fade" id="regulagemModal">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
             <h2 class="modal-title heading" id="exampleModalLabel">
@@ -845,7 +879,7 @@
       </div>
     </div>
     <div class="modal fade" id="manutencaoModal">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
             <h2 class="modal-title heading" id="exampleModalLabel">
@@ -905,7 +939,7 @@
       </div>
     </div>
     <div class="modal fade" id="motoresModal">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
             <h2 class="modal-title heading" id="exampleModalLabel">Motores</h2>
@@ -952,7 +986,7 @@
       </div>
     </div>
     <div class="modal fade" id="cambioModal">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
             <h2 class="modal-title heading" id="exampleModalLabel">
@@ -990,7 +1024,7 @@
       </div>
     </div>
     <div class="modal fade" id="fluidoModal">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
             <h2 class="modal-title heading" id="exampleModalLabel">
@@ -1028,7 +1062,7 @@
       </div>
     </div>
     <div class="modal fade" id="injecaoModal">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
             <h2 class="modal-title heading" id="exampleModalLabel">
@@ -1076,8 +1110,7 @@
     <div class="modal fade" id="whatToDoModal">
       <div
         class="
-          modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable
-        "
+          modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
       >
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
@@ -1257,8 +1290,7 @@
     <div class="modal fade" id="travelModal">
       <div
         class="
-          modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable
-        "
+          modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
       >
         <div style="border: 2px solid #f3e11d" class="modal-content">
           <div style="background-color: #f3e11d" class="modal-header">
@@ -1350,6 +1382,13 @@
         var header = document.querySelector("header");
         header.classList.toggle("sticky", window.scrollY > 0);
       });
+
+      function toggleMenu() {
+        var menuToggle = document.querySelector(".toggle");
+        var menu = document.querySelector(".menu");
+        menuToggle.classList.toggle("active");
+        menu.classList.toggle("active");
+      }
     </script>
 
     <script
@@ -1361,13 +1400,10 @@
     <script src="./js/smoothScroll.js"></script>
     <script src="./js/aboutUsBtnSmooth.js"></script>
 
-
     <!-- 
     
       Made by Luiz Alencar🦉
     
     -->
-
-
   </body>
 </html>

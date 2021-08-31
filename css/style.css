@@ -28,6 +28,10 @@ section{
   min-width: 50%;
 }
 
+.displayNone{
+  display: none;
+}
+
 /* HEADER */
 
 header{
@@ -108,15 +112,18 @@ header.sticky ul li a:hover{
   line-height: 1.5em;
   font-weight: 500;
   color: #A50021;
+  text-align: left;
   font-size: 3em;
 }
 
 .banner h2 span{
+  text-align: left;
   font-size: 1.5em;
   font-weight: 700;
 }
 
 .banner h3{
+  text-align: left;
   font-size: 1.5em;
   color: #A50021;
   font-weight: 500;
@@ -158,7 +165,7 @@ header.sticky ul li a:hover{
   font-size: 38px;
 }
 
-.content{
+.aboutUs .content{
   justify-content: space-between;
   text-align: justify;
   display: flex;
@@ -187,7 +194,7 @@ img{
   max-width: 100%;
 }
 
-.SecondContentBx{
+.secondContentBx{
   flex-direction: row;
   color: #A50021;
   display: flex;
@@ -212,7 +219,7 @@ img{
 }
 
 .services .content{
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
@@ -224,12 +231,12 @@ img{
   background: #fff;
   text-align: center;
   transition: 500ms;
-  max-width: 340px;
+  max-width: 30%;
   height: 250px;
   color: #A50021;
   border: none;
   margin: 20px;
-  width: 25%;
+  width: 300px;
 }
 
 .services .content .servicesBx:hover{
@@ -270,6 +277,7 @@ img{
   transition: 200ms;
   color: #F3E11D;
   font-weight: 500;
+  margin: 0px 5px;
   font-size: 16px;
   padding: 10px;
 }
@@ -283,12 +291,20 @@ img{
 
 /* LOCATION */
 
+.location .content{
+  justify-content: space-evenly;
+  flex-direction: row;
+  display: flex;
+}
+
 .addressContainer{
-  padding: 30px 70px;
   text-align: center;
   background: #fff;
   margin-left: 10px;
   transition: 500ms;
+  max-width: 50%;
+  padding: 30px;
+  width: 500px;
 }
 .addressContainer:hover{
   background: #F3E11D;
@@ -305,7 +321,7 @@ img{
 
 .map{
   height: 300px;
-  width: 400px;
+  width: 100%;
 }
 
 /* CONTACT */
@@ -314,12 +330,19 @@ img{
   background: #A50021;
 }
 
+.contact .content{
+  justify-content: space-between;
+  text-align: justify;
+  display: flex;
+}
+
 .contactInfo h3,
 .formBx h3{
-  color: #fff;
   margin-bottom: 10px;
   font-weight: 600;
+  text-align: left;
   font-size: 24px;
+  color: #fff;
 }
 
 .contactInfoBx{
@@ -340,15 +363,6 @@ img{
   color: #fff;
   display: flex;
   padding: 4px;
-}
-
-.contactInfoBx .addressContainer{
-  display: flex;
-  flex-direction: row;
-}
-
-.contactInfoBx .addressContainer .addressBx p{
-  margin: 0 50px 0 10px;
 }
 
 .contactInfoBx .box .contactInfoText{
@@ -417,7 +431,7 @@ img{
 /* PARTNERS */
 
 .partners .content{
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
@@ -515,3 +529,167 @@ img{
 
 /* RESPONSIVE */
 
+@media (max-width: 1125px) and (min-width: 991px){
+  header{
+    padding: 40px 30px;
+  }
+
+  header.sticky{
+   padding: 10px;
+  }
+
+  header ul li a{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 991px){
+  
+  header,
+  header.sticky {
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  header{
+    background: #fff;
+    width: 100vw;
+  }
+
+  .menu{
+    border-top: 1px solid rgba(165, 0, 33, 0.5);
+    padding: 100px 50px;
+    text-align: center;
+    background: #fff;
+    transition: 500ms;
+    position: fixed;
+    display: block;
+    height: 100vh;
+    z-index: 999;
+    width: 100%;
+    left: -100%;
+    top: 120px;
+  }
+
+  .menu.active{
+    left: 0;
+  }
+
+  header ul li a{
+    font-size: 24px;
+    margin: 10px;
+  }
+
+  .toggle{
+    background-image: url("../assets/icons/menu.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+  }
+
+  .toggle.active{
+    background-image: url("../assets/icons/close.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+  }
+
+  section{
+    padding: 100px 50px;
+  }
+
+  .banner{
+    padding: 150px 50px 100px
+  }
+
+  .banner h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .banner h3{
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .aboutUsBtn{
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .textBx{
+    width: 100%;
+  }
+
+  .contentBx h3{
+    font-size: 20px;
+  }
+
+  .contentBx h3,
+  .contentBx p {
+    display: flex;
+  }
+
+  .content{
+    flex-direction: column;
+  }
+
+  .secondContentBx{
+    display: none;
+  }
+
+  .front{
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .front img{
+    max-height: 400px;
+    height: 100%;
+  }
+
+  .servicesBx{
+    min-width: 300px;
+  }
+
+  
+  .footerContent{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .logoBx {
+    margin: 20px 0;
+  }
+  
+  .sloganBx{
+    margin: 20px 0;
+  }
+  
+  .mediasBx{
+    margin: 20px 0;
+  }
+  
+  .location .content{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+  
+  .location{
+    padding: 100px 0;
+  }
+
+  .addressContainer{
+    max-width: unset;
+    margin: 15px;
+    width: 100%;
+  }
+}
