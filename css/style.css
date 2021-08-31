@@ -101,7 +101,7 @@ header.sticky ul li a:hover{
   justify-content: space-between;
   background-repeat: no-repeat;
   background-position: right;
-  background-size: cover;
+  background-size: contain;
   align-items: center;
   position: relative; 
   min-height: 100vh;
@@ -190,7 +190,7 @@ header.sticky ul li a:hover{
   height: 330px;
 }
 
-img{
+.front img{
   max-width: 100%;
 }
 
@@ -203,6 +203,7 @@ img{
 .textBx{
   padding-right: 30px;
   text-align: justify;
+  margin-top: 50px;
   width: 50%;
 }
 
@@ -352,6 +353,7 @@ img{
 .contactInfoBx .box{
   position: relative;
   padding: 20px 0px;
+  text-align: left;
   display: flex;
 }
 
@@ -542,6 +544,10 @@ img{
     top: 50%;
     transform: translateY(-50%);
   }
+
+  .banner{
+    background-size: cover;
+  }
 }
 
 @media (max-width: 991px){
@@ -600,10 +606,12 @@ img{
 
   section{
     padding: 100px 50px;
+    position: relative;
   }
 
   .banner{
-    padding: 150px 50px 100px
+    padding: 150px 50px 100px;
+    background-size: cover;
   }
 
   .banner h2{
@@ -650,15 +658,17 @@ img{
   }
 
   .front img{
+    transform: translateX(-50%);
+    position: absolute;
     max-height: 400px;
-    height: 100%;
+    bottom: 100px;
+    padding: 10px;
   }
 
   .servicesBx{
     min-width: 300px;
   }
 
-  
   .footerContent{
     flex-direction: column;
     text-align: center;
@@ -691,5 +701,9 @@ img{
     max-width: unset;
     margin: 15px;
     width: 100%;
+  }
+
+  .btnTipsBx{
+    padding: 10px;
   }
 }
