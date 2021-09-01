@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900%display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
 
 *{
   font-family: 'Poppins', sans-serif;
@@ -184,14 +183,6 @@ header.sticky ul li a:hover{
 
 .contentBx h4{
   font-weight: 700;
-}
-
-.front{
-  height: 330px;
-}
-
-.front img{
-  max-width: 100%;
 }
 
 .secondContentBx{
