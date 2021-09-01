@@ -10,8 +10,12 @@
 
       gtag('config', 'G-J8GQ5DVP1Z');
     </script>
+
     <script>
-      window.location.href = "https://www.manosonline.com.br"
+      if (location.protocol !== 'https:'){
+        const httpsURL = 'https://' + location.href.split('//')[1]
+        location.replace(httpsURL)
+      }
     </script>
 
     <meta charset="UTF-8" />
